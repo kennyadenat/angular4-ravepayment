@@ -8,9 +8,7 @@ An AngularJS library for RavePay Payment Gateway.
 
 This AngularJS library provides a wrapper to add RavePay Payment to your AngularJS application
 
-###Install
-
-##### NPM
+### Install
 ```
 npm install iamraphson/angular4-ravepayment
 ```
