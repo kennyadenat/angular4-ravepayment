@@ -1,27 +1,111 @@
-# Angular4Ravepayment
+# Rave Payment Component for Angular 2, 3, 4, 5
+An AngularJS library for RavePay Payment Gateway.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+### Demo
+![Demo Image](demo.png?raw=true "Demo Image")
 
-## Development server
+### Get Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This AngularJS library provides a wrapper to add RavePay Payment to your AngularJS application
 
-## Code scaffolding
+###Install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##### NPM
+```
+npm install iamraphson/angular4-ravepayment
+```
+Then go ahead and reference the Rave inline script in your index.html:
+```html
+<script src="//flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+```
 
-## Build
+### Usage
+`app.module.ts` file
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { RavepaymentModule } from 'angular4-ravepayment';
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    RavepaymentModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+`app.component.html` file
+```
+<rave-pay-button
+    [text]="'Pay me,my money'"
+    [className]="'paymentbtn'"
+    (callback)="confirmPayment($event)"
+    (close)="cancelledPayment()"
+    [key]="'FLWPUBK-xxxxxxxxxxxxxxxxxxxxxxxx-X'"
+    [reference]="generateReference()"
+    [amount]="10000"
+    [email]="'FooBar@rave.com'"
+></rave-pay-button >
+```
+`app.component.ts` file
+```
+import { Component } from '@angular/core';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  confirmPayment(response: object): void {
+    console.log(response);
+  }
 
-## Running unit tests
+  cancelledPayment(): void {
+      console.log('close');
+  }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  generateReference(): string {
+      let text = '';
+      const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      for (let i = 0; i < 10; i++) {
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }
 
-## Running end-to-end tests
+      return text;
+  }
+}
+````
+[Usage](./src/app/app.component.html)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Deployment
+WHEN DEPLOYING TO PRODUCTION/LIVE SYSTEM, take note of the following;
+1) Change RavePay Inline script,you kept in the index.html to 
+```javascript
+<script src="//api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+```
+2) Change RavePay PUBLIC KEY
 
-## Further help
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Some commit message'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request 😉😉
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## How can I thank you?
+
+Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or Any Social Media? Spread the word!
+
+Don't forget to [follow me on twitter](https://twitter.com/iamraphson)!
+
+Thanks!
+Ayeni Olusegun.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
