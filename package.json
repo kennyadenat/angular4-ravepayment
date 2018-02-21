@@ -47,9 +47,9 @@
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
   },
-  "main": "bundles/angular4-ravepayment.umd.js",
-  "module": "esm5/angular4-ravepayment.js",
-  "es2015": "esm2015/angular4-ravepayment.js",
-  "typings": "angular4-ravepayment.d.ts",
-  "metadata": "angular4-ravepayment.metadata.json"
+  "main": "dist/bundles/angular4-ravepayment.umd.js",
+  "module": "dist/esm5/angular4-ravepayment.js",
+  "es2015": "dist/esm2015/angular4-ravepayment.js",
+  "typings": "dist/angular4-ravepayment.d.ts",
+  "metadata": "dist/angular4-ravepayment.metadata.json"
 }
