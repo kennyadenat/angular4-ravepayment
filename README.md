@@ -1,4 +1,4 @@
-# Rave Payment Component for Angular 2, 3, 4, 5
+# Rave Payment Component for Angular 2, 4, 5
 An AngularJS library for RavePay Payment Gateway.
 
 ### Demo
