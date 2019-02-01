@@ -13,6 +13,7 @@ interface IRaveOptions {
     custom_description: string;
     custom_logo: string;
     meta ?: any;
+    redirectUrl: string;
     callback: (response: object) => void;
     onclose: () => void;
 }
@@ -46,6 +47,7 @@ export class RavepaymentComponent implements OnInit {
     @Input() custom_title: string;
     @Input() custom_description: string;
     @Input() custom_logo: string;
+    @Input() redirectUrl: string;
 
     private raveOptions: IRaveOptions;
 
@@ -73,6 +75,7 @@ export class RavepaymentComponent implements OnInit {
             custom_title: this.custom_title || '',
             custom_description: this.custom_description || '',
             custom_logo: this.custom_logo || '',
+            redirect_url: this.redirectUrl || '',
             meta: this.meta || {}
         };
     }
