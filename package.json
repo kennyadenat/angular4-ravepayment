@@ -14,6 +14,7 @@
   "private": false,
   "dependencies": {
     "@angular/animations": "^8.2.14",
+    "@angular/cli": "^8.3.25",
     "@angular/common": "^8.2.14",
     "@angular/compiler": "^8.2.14",
     "@angular/core": "^8.2.14",
@@ -23,14 +24,13 @@
     "@angular/router": "^8.2.14",
     "core-js": "^2.4.1",
     "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.0.0-rc.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.7",
-    "@angular/cli": "^9.0.7",
-    "@angular/compiler-cli": "^9.0.7",
+    "@angular-devkit/build-angular": "^0.803.24",
+    "@angular/compiler-cli": "^8.2.12",
     "@angular/language-service": "^8.2.14",
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "^2.0.8",
@@ -47,7 +47,7 @@
     "protractor": "^6.0.0",
     "ts-node": "^8.7.0",
     "tslint": "~5.9.1",
-    "typescript": "~3.2.1"
+    "typescript": "~3.5.3"
   },
   "main": "dist/bundles/angular4-ravepayment.umd.js",
   "module": "dist/esm5/angular4-ravepayment.js",
