@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
+import {Component, Input, OnInit, EventEmitter, Output, ChangeDetectionStrategy} from '@angular/core';
 
 interface IRaveOptions {
     PBFPubKey: string;
@@ -25,6 +25,7 @@ interface MyWindow extends Window {
 declare let window: MyWindow
 
 @Component({
+    changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'rave-pay-button',
   templateUrl: './ravepayment.component.html',
   styleUrls: ['./ravepayment.component.css']
@@ -36,6 +37,7 @@ export class RavepaymentComponent implements OnInit {
     @Input() className: string;
     @Output() callback = new EventEmitter<object>();
     @Output() close = new EventEmitter();
+    @Output() getNewReference = new EventEmitter();
     @Input() key: string;
     @Input() email: string;
     @Input() amount: number;
@@ -61,6 +63,7 @@ export class RavepaymentComponent implements OnInit {
     madePayment() {
         this.prepRaveOptions();
         window.getpaidSetup(this.raveOptions);
+        this.getNewReference.emit();
     }
 
     prepRaveOptions(): void {

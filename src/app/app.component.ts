@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnChanges, AfterViewInit, AfterViewChecked, AfterContentChecked } from '@angular/core';
 
 @Component({
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  reference: string;
+  ngOnInit() {
+    this.reference = this.generateReference();
+  }
+
   confirmPayment(response: object): void {
     console.log(response);
   }
 
   cancelledPayment(): void {
-      console.log('close');
   }
 
   generateReference(): string {
@@ -22,5 +27,9 @@ export class AppComponent {
       }
 
       return text;
+  }
+
+  getNewReference() {
+    this.reference = this.generateReference();
   }
 }

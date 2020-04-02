@@ -3,8 +3,9 @@
     [className]="'paymentbtn'"
     (callback)="confirmPayment($event)"
     (close)="cancelledPayment()"
+    (getNewReference)="getNewReference()"
     [key]="'FLWPUBK-xxxxxxxxxxxxxxxxxxxxxxxx-X'"
-    [reference]="generateReference()"
+    [reference]="reference"
     [amount]="10000"
     [email]="'FooBar@rave.com'"
 ></rave-pay-button >
