@@ -22,10 +22,10 @@ interface IRaveOptions {
 interface MyWindow extends Window {
     getpaidSetup: (options: IRaveOptions) => void;
 }
-declare let window: MyWindow
+declare let window: MyWindow;
 
 @Component({
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    // changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'rave-pay-button',
   templateUrl: './ravepayment.component.html',
   styleUrls: ['./ravepayment.component.css']
@@ -52,7 +52,6 @@ export class RavepaymentComponent implements OnInit {
     @Input() custom_description: string;
     @Input() custom_logo: string;
     @Input() redirect_url: string;
-    
 
     private raveOptions: IRaveOptions;
 

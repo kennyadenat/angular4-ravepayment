@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnChanges, AfterViewInit, AfterViewChecked, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
