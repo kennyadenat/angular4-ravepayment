@@ -22,7 +22,7 @@ interface IRaveOptions {
 interface MyWindow extends Window {
     getpaidSetup: (options: IRaveOptions) => void;
 }
-declare let window: MyWindow
+declare let window: MyWindow;
 
 @Component({
     // changeDetection: ChangeDetectionStrategy.OnPush,
@@ -52,7 +52,6 @@ export class RavepaymentComponent implements OnInit {
     @Input() custom_description: string;
     @Input() custom_logo: string;
     @Input() redirect_url: string;
-    
 
     private raveOptions: IRaveOptions;
 
