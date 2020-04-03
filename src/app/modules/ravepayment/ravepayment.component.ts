@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, EventEmitter, Output, ChangeDetectionStrategy} from '@angular/core';
+import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
 
 interface IRaveOptions {
     PBFPubKey: string;
@@ -9,11 +9,9 @@ interface IRaveOptions {
     customer_email: string;
     customer_firstname: string;
     customer_lastname: string;
-    customer_phone: string;
     custom_title: string;
     custom_description: string;
     custom_logo: string;
-    redirect_url: string;
     meta ?: any;
     callback: (response: object) => void;
     onclose: () => void;
@@ -22,10 +20,9 @@ interface IRaveOptions {
 interface MyWindow extends Window {
     getpaidSetup: (options: IRaveOptions) => void;
 }
-declare let window: MyWindow;
+declare let window: MyWindow
 
 @Component({
-    // changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'rave-pay-button',
   templateUrl: './ravepayment.component.html',
   styleUrls: ['./ravepayment.component.css']
@@ -37,7 +34,6 @@ export class RavepaymentComponent implements OnInit {
     @Input() className: string;
     @Output() callback = new EventEmitter<object>();
     @Output() close = new EventEmitter();
-    @Output() getNewReference = new EventEmitter();
     @Input() key: string;
     @Input() email: string;
     @Input() amount: number;
@@ -47,11 +43,9 @@ export class RavepaymentComponent implements OnInit {
     @Input() country: string;
     @Input() customer_firstname: string;
     @Input() customer_lastname: string;
-    @Input() customer_phone: string;
     @Input() custom_title: string;
     @Input() custom_description: string;
     @Input() custom_logo: string;
-    @Input() redirect_url: string;
 
     private raveOptions: IRaveOptions;
 
@@ -62,7 +56,6 @@ export class RavepaymentComponent implements OnInit {
     madePayment() {
         this.prepRaveOptions();
         window.getpaidSetup(this.raveOptions);
-        this.getNewReference.emit();
     }
 
     prepRaveOptions(): void {
@@ -77,11 +70,9 @@ export class RavepaymentComponent implements OnInit {
             country: this.country || 'NG',
             customer_firstname: this.customer_firstname || '',
             customer_lastname: this.customer_lastname || '',
-            customer_phone: this.customer_phone || '',
             custom_title: this.custom_title || '',
             custom_description: this.custom_description || '',
             custom_logo: this.custom_logo || '',
-            redirect_url: this.redirect_url || '',
             meta: this.meta || {}
         };
     }

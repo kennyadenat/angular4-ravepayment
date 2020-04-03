@@ -6,17 +6,13 @@ import { Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  reference: string;
-  ngOnInit() {
-    this.reference = this.generateReference();
-  }
-
+export class AppComponent {
   confirmPayment(response: object): void {
     console.log(response);
   }
 
   cancelledPayment(): void {
+      console.log('close');
   }
 
   generateReference(): string {
@@ -27,9 +23,5 @@ export class AppComponent implements OnInit {
       }
 
       return text;
-  }
-
-  getNewReference() {
-    this.reference = this.generateReference();
   }
 }
