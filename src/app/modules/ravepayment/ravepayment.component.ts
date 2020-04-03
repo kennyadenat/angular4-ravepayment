@@ -25,7 +25,7 @@ interface MyWindow extends Window {
 declare let window: MyWindow
 
 @Component({
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    // changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'rave-pay-button',
   templateUrl: './ravepayment.component.html',
   styleUrls: ['./ravepayment.component.css']
