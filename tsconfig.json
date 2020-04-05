@@ -18,6 +18,14 @@
       "es2017",
       "dom"
     ],
+    "paths": {
+      "angular4-ravepayment": [
+        "dist/angular4-ravepayment"
+      ],
+      "angular4-ravepayment/*": [
+        "dist/angular4-ravepayment/*"
+      ]
+    },
     "baseUrl": "./"
   }
 }
