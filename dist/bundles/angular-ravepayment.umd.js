@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
-    typeof define === 'function' && define.amd ? define('angular4-ravepayment', ['exports', '@angular/core', '@angular/common'], factory) :
-    (global = global || self, factory(global['angular4-ravepayment'] = {}, global.ng.core, global.ng.common));
+    typeof define === 'function' && define.amd ? define('angular-ravepayment', ['exports', '@angular/core', '@angular/common'], factory) :
+    (global = global || self, factory(global['angular-ravepayment'] = {}, global.ng.core, global.ng.common));
 }(this, (function (exports, core, common) { 'use strict';
 
     /*! *****************************************************************************
@@ -333,4 +333,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=angular4-ravepayment.umd.js.map
+//# sourceMappingURL=angular-ravepayment.umd.js.map

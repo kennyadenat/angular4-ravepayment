@@ -116,4 +116,4 @@ var RavepaymentModule = /** @class */ (function () {
  */
 
 export { RavepaymentModule, RavepaymentComponent as ɵa };
-//# sourceMappingURL=angular4-ravepayment.js.map
+//# sourceMappingURL=angular-ravepayment.js.map
