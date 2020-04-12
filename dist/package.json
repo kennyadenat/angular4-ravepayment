@@ -1,6 +1,6 @@
 {
-  "name": "angular4-ravepayment",
-  "version": "0.0.0",
+  "name": "angular-ravepayment",
+  "version": "2.0.0",
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -18,14 +18,14 @@
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
-  "main": "bundles/angular4-ravepayment.umd.js",
-  "module": "fesm5/angular4-ravepayment.js",
-  "es2015": "fesm2015/angular4-ravepayment.js",
-  "typings": "angular4-ravepayment.d.ts",
-  "metadata": "angular4-ravepayment.metadata.json",
-  "esm5": "esm5/angular4-ravepayment.js",
-  "esm2015": "esm2015/angular4-ravepayment.js",
-  "fesm5": "fesm5/angular4-ravepayment.js",
-  "fesm2015": "fesm2015/angular4-ravepayment.js",
+  "main": "bundles/angular-ravepayment.umd.js",
+  "module": "fesm5/angular-ravepayment.js",
+  "es2015": "fesm2015/angular-ravepayment.js",
+  "typings": "angular-ravepayment.d.ts",
+  "metadata": "angular-ravepayment.metadata.json",
+  "esm5": "esm5/angular-ravepayment.js",
+  "esm2015": "esm2015/angular-ravepayment.js",
+  "fesm5": "fesm5/angular-ravepayment.js",
+  "fesm2015": "fesm2015/angular-ravepayment.js",
   "sideEffects": false
 }

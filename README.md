@@ -1,4 +1,4 @@
-# Rave Payment Component for Angular 2, 4, 5
+# Rave Payment Component for Angular 5+
 An AngularJS library for RavePay Payment Gateway.
 
 ### Demo
@@ -6,7 +6,7 @@ An AngularJS library for RavePay Payment Gateway.
 
 ### Get Started
 
-This AngularJS library provides a wrapper to add RavePay Payment to your AngularJS application
+This Angular library provides a wrapper to add RavePay Payment to your Angular5+ application
 
 ### Install
 ```
